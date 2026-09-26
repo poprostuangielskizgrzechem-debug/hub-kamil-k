@@ -2001,6 +2001,43 @@ video {
       .hub-gram-items li { background:var(--hub-paper); border-radius:8px; padding:7px 11px;
                            font-size:14.5px; color:var(--hub-ink); }
 
+      /* --- notatka graficzna (g.sections) --- */
+      .hub-gsections { display:flex; flex-direction:column; gap:12px; margin-top:14px; }
+      .hub-gcard { --t:var(--hub-blue); --tb:var(--hub-tint); border:1px solid var(--hub-line); border-left:5px solid var(--t);
+                   border-radius:12px; padding:14px 16px; background:#fff; }
+      .tone-red   { --t:var(--hub-accent); --tb:#fdecee; }
+      .tone-green { --t:#1f8a4c; --tb:#e8f5ee; }
+      .tone-gold  { --t:#b7791f; --tb:#fdf6e3; }
+      .hub-gcard-title { font-family:'Plus Jakarta Sans', Arial, sans-serif; font-size:16px; font-weight:800;
+                         color:var(--t); margin:0 0 8px; display:flex; gap:8px; align-items:baseline; }
+      .hub-gcard-emoji { font-size:19px; line-height:1; }
+      .hub-gcard-points { margin:0; padding-left:20px; font-size:15px; line-height:1.6; color:var(--hub-ink); }
+      .hub-gcard-points li + li { margin-top:4px; }
+      .hub-gcard-ex { background:var(--tb); border-radius:10px; padding:10px 13px; margin-top:10px; }
+      .hub-gcard-ex-label { font-family:'Plus Jakarta Sans', Arial, sans-serif; font-size:10.5px; font-weight:700;
+                            text-transform:uppercase; letter-spacing:.8px; color:var(--t); margin:0 0 4px; }
+      .hub-gcard-ex-line { font-size:15px; line-height:1.55; color:var(--hub-ink); margin:0; }
+      .hub-gcard-ex-line + .hub-gcard-ex-line { margin-top:5px; }
+      .hub-hl { color:var(--t); font-weight:800; }
+      .hub-gtable-wrap { overflow-x:auto; }
+      .hub-gtable { width:100%; border-collapse:collapse; font-size:14.5px; line-height:1.5; }
+      .hub-gtable th { font-family:'Plus Jakarta Sans', Arial, sans-serif; font-weight:800; text-align:left;
+                       background:var(--tb); color:var(--hub-ink); padding:8px 10px; }
+      .hub-gtable td { padding:8px 10px; border-top:1px solid var(--hub-line); vertical-align:top; color:var(--hub-ink); }
+      .hub-gtable td + td, .hub-gtable th + th { border-left:1px solid var(--hub-line); }
+      .hub-gtip { --t:var(--hub-blue); --tb:var(--hub-tint); display:flex; gap:12px; align-items:flex-start;
+                  background:var(--tb); border-radius:12px; padding:13px 16px; }
+      .hub-gtip-emoji { font-size:22px; line-height:1.2; flex-shrink:0; }
+      .hub-gtip-title { font-family:'Plus Jakarta Sans', Arial, sans-serif; font-size:15px; font-weight:800; color:var(--t); margin:0 0 3px; }
+      .hub-gtip-text { font-size:15px; line-height:1.6; color:var(--hub-ink); margin:0; white-space:pre-line; }
+      @media (max-width:520px) {
+        .hub-gram:has(.hub-gsections) { padding:14px 10px; }
+        .hub-gcard { padding:12px 11px; }
+        .hub-gtip { padding:12px 11px; gap:9px; }
+        .hub-gtable { font-size:13.5px; }
+        .hub-gtable th, .hub-gtable td { padding:7px 6px; }
+      }
+
       /* --- kafelki linkow --- */
       .hub-links { display:flex; flex-direction:column; gap:8px; margin-top:14px; }
       .hub-link-tile { display:flex; align-items:center; gap:12px; text-decoration:none;
@@ -2534,6 +2571,14 @@ video {
             .hub-ex-opt.is-ok { border-color: #16a34a; background: #f0fdf4; color: #15803d; }
             .hub-ex-opt.is-bad { border-color: #dc2626; background: #fef2f2; color: #b91c1c; text-decoration: line-through; }
             .hub-ex-opt.is-key { border-color: #16a34a; border-style: dashed; }
+            .hub-ex-table-wrap { overflow-x: auto; margin: 0 0 12px; }
+            .hub-ex-table { width: 100%; border-collapse: collapse; }
+            .hub-ex-table th { text-align: left; font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--hub-muted); padding: 4px 6px 8px; }
+            .hub-ex-table td { padding: 8px 6px; border-top: 1px solid var(--hub-line); vertical-align: middle; }
+            .hub-ex-table td.hub-ex-num { width: 1%; white-space: nowrap; }
+            .hub-ex-table .hub-ex-input { width: 100%; min-width: 90px; text-align: left; }
+            .hub-ex-img { width: 1%; }
+            .hub-ex-img svg { display: block; height: 40px; width: auto; max-width: 64px; box-shadow: 0 0 0 1px #cbd5e1; }
             .hub-ex-saved { font-size: 12.5px; color: var(--hub-muted); margin: 0 0 14px; }
         </style>
         <section id="hub-exercises-view" class="hidden no-print flex-grow flex items-start justify-center relative z-20">
@@ -3038,6 +3083,112 @@ video {
                                     "sentenceWithGap": "He spent his Saturday mowing the [gap] in the back garden.",
                                     "firstLetterHint": "l"
                         }
+            ],
+            "Lekcja 3 (26.09)": [
+                        {
+                                    "word": "compete",
+                                    "translation": "konkurować",
+                                    "definition": "to try to be more successful than others",
+                                    "pos": "v",
+                                    "sentenceWithGap": "Small shops find it hard to [gap] with big supermarket chains.",
+                                    "firstLetterHint": "c"
+                        },
+                        {
+                                    "word": "you were busy",
+                                    "translation": "byłeś zajęty",
+                                    "definition": "a way of saying the other person had a lot to do at that time",
+                                    "pos": "phr",
+                                    "sentenceWithGap": "Sorry I didn't call you back. I thought [gap].",
+                                    "firstLetterHint": "y"
+                        },
+                        {
+                                    "word": "out of stock",
+                                    "translation": "niedostępny, brak na stanie",
+                                    "definition": "not available in a shop because it has all been sold",
+                                    "pos": "phr",
+                                    "sentenceWithGap": "Sorry, that ham is [gap] until next week.",
+                                    "firstLetterHint": "o"
+                        },
+                        {
+                                    "word": "founder",
+                                    "translation": "założyciel",
+                                    "definition": "the person who starts a company or organisation",
+                                    "pos": "n",
+                                    "sentenceWithGap": "My father was the [gap] of the company. He started it with one small shop.",
+                                    "firstLetterHint": "f"
+                        },
+                        {
+                                    "word": "bait",
+                                    "translation": "przynęta",
+                                    "definition": "food used to catch fish or animals, or something used to attract people",
+                                    "pos": "n",
+                                    "sentenceWithGap": "The fisherman put a worm on the hook as [gap].",
+                                    "firstLetterHint": "b"
+                        },
+                        {
+                                    "word": "ownership",
+                                    "translation": "własność, prawo własności",
+                                    "definition": "the fact of legally owning something",
+                                    "pos": "n",
+                                    "sentenceWithGap": "The documents prove that I have full [gap] of the land.",
+                                    "firstLetterHint": "o"
+                        },
+                        {
+                                    "word": "hitchhike",
+                                    "translation": "jechać autostopem",
+                                    "definition": "to travel by getting free rides in other people's cars",
+                                    "pos": "v",
+                                    "sentenceWithGap": "We had no money for the bus, so we decided to [gap] to the coast.",
+                                    "firstLetterHint": "h"
+                        },
+                        {
+                                    "word": "mechanic by trade",
+                                    "translation": "mechanik z zawodu",
+                                    "definition": "someone who trained and worked as a mechanic",
+                                    "pos": "phr",
+                                    "sentenceWithGap": "He works as a butcher now, but he's a [gap] - he can fix any car.",
+                                    "firstLetterHint": "m"
+                        },
+                        {
+                                    "word": "scaffolding",
+                                    "translation": "rusztowanie",
+                                    "definition": "a metal structure that builders stand on when working on a building",
+                                    "pos": "n",
+                                    "sentenceWithGap": "The builders put up [gap] around the house before painting the walls.",
+                                    "firstLetterHint": "s"
+                        },
+                        {
+                                    "word": "advance",
+                                    "translation": "zaliczka",
+                                    "definition": "part of your pay that you get before the usual day",
+                                    "pos": "n",
+                                    "sentenceWithGap": "He asked his boss for an [gap] on his salary because his car broke down.",
+                                    "firstLetterHint": "a"
+                        },
+                        {
+                                    "word": "serve",
+                                    "translation": "obsługiwać (klientów)",
+                                    "definition": "to help customers and give them what they want in a shop",
+                                    "pos": "v",
+                                    "sentenceWithGap": "Saturday is our busiest day - we [gap] over a hundred customers at the counter.",
+                                    "firstLetterHint": "s"
+                        },
+                        {
+                                    "word": "sleeping bag",
+                                    "translation": "śpiwór",
+                                    "definition": "a warm bag you sleep in, e.g. in a tent",
+                                    "pos": "n",
+                                    "sentenceWithGap": "It was cold in the tent, so I was glad I had a warm [gap].",
+                                    "firstLetterHint": "s"
+                        },
+                        {
+                                    "word": "exclude",
+                                    "translation": "wykluczać",
+                                    "definition": "to not let someone take part in something",
+                                    "pos": "v",
+                                    "sentenceWithGap": "It's not fair to [gap] new workers from team meetings.",
+                                    "firstLetterHint": "e"
+                        }
             ]
 };
 
@@ -3050,8 +3201,8 @@ video {
         "teacherWhatsApp": "48602620859",
         "storageKey": "hub_kamil-k_2026-09",
         "studentKey": "hub_kamil-k",
-        "stamp": "aktualizacja po lekcji 2, 5.09.2026",
-        "lastLessonPhrase": "lekcji 2",
+        "stamp": "aktualizacja po lekcji 3, 26.09.2026",
+        "lastLessonPhrase": "lekcji 3",
         "lessons": [
                 {
                         "label": "Lekcja 1",
@@ -3066,6 +3217,13 @@ video {
                         "categoryKey": "Lekcja 2 (12.09)",
                         "vocabCount": 23,
                         "topic": "Pogawędka o zakupach, zabezpieczeniach domu, Zdzichu, inteligencji emocjonalnej, spokoju wewnętrznym, pływaniu i odchudzaniu"
+                },
+                {
+                        "label": "Lekcja 3",
+                        "dateLabel": "26.09.2026",
+                        "categoryKey": "Lekcja 3 (26.09)",
+                        "vocabCount": 13,
+                        "topic": "Ogólna konwersacja o relacjach, biznesie, konkurencji, rozwiązywaniu problemów, pomaganiu ludziom oraz podchodzeniu do pracy z dystansem"
                 }
         ],
         "grammar": [
@@ -3077,6 +3235,7 @@ video {
                         "correction": "my mum's friend died",
                         "items": [],
                         "explanation": "Dzierżawczy 's' pokazuje, kto jest właścicielem: \"my mum's friend\" to przyjaciel mojej mamy, a \"my friend's mum\" to mama mojego przyjaciela.",
+                        "sections": [],
                         "links": []
                 },
                 {
@@ -3087,6 +3246,7 @@ video {
                         "correction": "higher prices",
                         "items": [],
                         "explanation": "Z cenami używamy \"higher/lower\", nie \"bigger/smaller\" - to utrwalone połączenie wyrazowe.",
+                        "sections": [],
                         "links": []
                 },
                 {
@@ -3097,6 +3257,7 @@ video {
                         "correction": "when we were sitting",
                         "items": [],
                         "explanation": "Czasownik \"be\" w czasie przeszłym z \"we\" to zawsze \"were\", nie \"was\".",
+                        "sections": [],
                         "links": []
                 },
                 {
@@ -3107,6 +3268,7 @@ video {
                         "correction": "I need to skip my evening training",
                         "items": [],
                         "explanation": "\"Leave\" to fizycznie opuścić miejsce, a \"skip\" to celowo nie pójść na coś zaplanowanego - tu chodzi o pominięcie treningu.",
+                        "sections": [],
                         "links": []
                 },
                 {
@@ -3117,6 +3279,7 @@ video {
                         "correction": "on my way",
                         "items": [],
                         "explanation": "Utrwalony zwrot to \"on my way\" (w drodze), nie \"in my way\".",
+                        "sections": [],
                         "links": []
                 },
                 {
@@ -3127,6 +3290,7 @@ video {
                         "correction": "cheap mice",
                         "items": [],
                         "explanation": "Liczba mnoga od \"mouse\" jest nieregularna: \"mice\", nie \"mouses\".",
+                        "sections": [],
                         "links": []
                 },
                 {
@@ -3137,6 +3301,7 @@ video {
                         "correction": "I was a little disappointed",
                         "items": [],
                         "explanation": "\"Disappointed\" to przymiotnik opisujący uczucie, \"disappointment\" to rzeczownik (rozczarowanie).",
+                        "sections": [],
                         "links": []
                 },
                 {
@@ -3147,6 +3312,7 @@ video {
                         "correction": "longer period of time",
                         "items": [],
                         "explanation": "Z czasem trwania używamy \"longer/shorter\", nie \"bigger/smaller\".",
+                        "sections": [],
                         "links": []
                 },
                 {
@@ -3157,6 +3323,7 @@ video {
                         "correction": "during the break",
                         "items": [],
                         "explanation": "Z rzeczownikiem \"break\" (przerwa) używamy przyimka \"during\", nie \"in\".",
+                        "sections": [],
                         "links": []
                 },
                 {
@@ -3167,6 +3334,7 @@ video {
                         "correction": "do too many things",
                         "items": [],
                         "explanation": "\"Things\" jest rzeczownikiem policzalnym, więc \"too many\", nie \"too much\".",
+                        "sections": [],
                         "links": []
                 },
                 {
@@ -3177,6 +3345,7 @@ video {
                         "correction": "I don't know how he feels",
                         "items": [],
                         "explanation": "W pytaniach pośrednich szyk wraca do zdania twierdzącego - bez odwrócenia z \"does\".",
+                        "sections": [],
                         "links": []
                 },
                 {
@@ -3187,6 +3356,7 @@ video {
                         "correction": "went on trips",
                         "items": [],
                         "explanation": "Z rzeczownikiem \"trip\" (wycieczka) używamy czasownika \"go on\", nie \"make\".",
+                        "sections": [],
                         "links": []
                 },
                 {
@@ -3197,6 +3367,7 @@ video {
                         "correction": "when I used to drink",
                         "items": [],
                         "explanation": "Dla powtarzającego się nawyku z przeszłości, który już nie trwa, używamy \"used to\", nie czasu ciągłego.",
+                        "sections": [],
                         "links": []
                 },
                 {
@@ -3207,6 +3378,7 @@ video {
                         "correction": "I went to Ireland",
                         "items": [],
                         "explanation": "Nazwy krajów co do zasady nie mają przedimka \"the\".",
+                        "sections": [],
                         "links": []
                 },
                 {
@@ -3217,6 +3389,7 @@ video {
                         "correction": "I have time",
                         "items": [],
                         "explanation": "\"Time\" w znaczeniu ogólnym (mieć czas) jest niepoliczalne, więc bez przedimka \"a\".",
+                        "sections": [],
                         "links": []
                 },
                 {
@@ -3229,6 +3402,7 @@ video {
                                 "learn vs teach"
                         ],
                         "explanation": "\"Teach\" oznacza uczyć kogoś (nauczyciel uczy ucznia), a \"learn\" oznacza uczyć się samemu - te czasowniki nie są zamienne.",
+                        "sections": [],
                         "links": []
                 },
                 {
@@ -3239,6 +3413,7 @@ video {
                         "correction": "",
                         "items": [],
                         "explanation": "Materiały do samodzielnego powtórzenia pytań pośrednich (indirect questions).",
+                        "sections": [],
                         "links": [
                                 {
                                         "label": "Pytania pośrednie (Indirect questions) | ROCK YOUR ENGLISH #176",
@@ -3253,6 +3428,185 @@ video {
                                         "questions": []
                                 }
                         ]
+                },
+                {
+                        "lessonLabel": "Lekcja 3",
+                        "dateLabel": "26.09.2026",
+                        "topic": "Ogólna konwersacja o relacjach, biznesie, konkurencji, rozwiązywaniu problemów, pomaganiu ludziom oraz podchodzeniu do pracy z dystansem",
+                        "mistake": "he work there",
+                        "correction": "he works there",
+                        "items": [],
+                        "explanation": "W Present Simple w 3. osobie l. poj. (he/she/it) dodajemy -s do czasownika.",
+                        "sections": [],
+                        "links": []
+                },
+                {
+                        "lessonLabel": "Lekcja 3",
+                        "dateLabel": "26.09.2026",
+                        "topic": "",
+                        "mistake": "he go back",
+                        "correction": "he went back",
+                        "items": [],
+                        "explanation": "O przeszłości mówimy w Past Simple. \"go\" jest nieregularne: go - went - gone.",
+                        "sections": [],
+                        "links": []
+                },
+                {
+                        "lessonLabel": "Lekcja 3",
+                        "dateLabel": "26.09.2026",
+                        "topic": "",
+                        "mistake": "I thought it was their",
+                        "correction": "I thought it was theirs",
+                        "items": [],
+                        "explanation": "\"their\" (ich) zawsze stoi przed rzeczownikiem: their car. Gdy rzeczownika nie ma, używamy \"theirs\": it was theirs.",
+                        "sections": [],
+                        "links": []
+                },
+                {
+                        "lessonLabel": "Lekcja 3",
+                        "dateLabel": "26.09.2026",
+                        "topic": "",
+                        "mistake": "We ate a soup",
+                        "correction": "We ate soup",
+                        "items": [],
+                        "explanation": "Zupa jako jedzenie jest tu niepoliczalna, więc bez \"a/an\". Jedna porcja to \"a bowl of soup\".",
+                        "sections": [],
+                        "links": []
+                },
+                {
+                        "lessonLabel": "Lekcja 3",
+                        "dateLabel": "26.09.2026",
+                        "topic": "",
+                        "mistake": "It can works",
+                        "correction": "It can work",
+                        "items": [],
+                        "explanation": "Po czasownikach modalnych (can, must, should, will) czasownik ma formę podstawową, bez -s.",
+                        "sections": [],
+                        "links": []
+                },
+                {
+                        "lessonLabel": "Lekcja 3",
+                        "dateLabel": "26.09.2026",
+                        "topic": "",
+                        "mistake": "He drank to dead",
+                        "correction": "He drank himself to death",
+                        "items": [],
+                        "explanation": "Stały zwrot: drink yourself to death (zapić się na śmierć). \"dead\" to przymiotnik (martwy), \"death\" to rzeczownik (śmierć).",
+                        "sections": [],
+                        "links": []
+                },
+                {
+                        "lessonLabel": "Lekcja 3",
+                        "dateLabel": "26.09.2026",
+                        "topic": "Przymiotniki dzierżawcze i zaimki dzierżawcze",
+                        "mistake": "",
+                        "correction": "",
+                        "items": [],
+                        "explanation": "Jedne i drugie mówią, do kogo coś należy. Różnica: przymiotnik stoi przed rzeczownikiem, a zaimek go zastępuje.",
+                        "sections": [
+                                {
+                                        "type": "card",
+                                        "tone": "blue",
+                                        "emoji": "🏷️",
+                                        "title": "Przymiotniki dzierżawcze (possessive adjectives)",
+                                        "points": [
+                                                "**my, your, his, her, its, our, their**",
+                                                "Zawsze stoją **przed rzeczownikiem**.",
+                                                "Nie łączymy ich z a/an ani the: my car, nie the my car."
+                                        ],
+                                        "examples": [
+                                                "This is **my** shop.",
+                                                "**Their** son works with us.",
+                                                "The dog is eating **its** food."
+                                        ]
+                                },
+                                {
+                                        "type": "card",
+                                        "tone": "green",
+                                        "emoji": "🙋",
+                                        "title": "Zaimki dzierżawcze (possessive pronouns)",
+                                        "points": [
+                                                "**mine, yours, his, hers, ours, theirs**",
+                                                "Stoją **same**, bez rzeczownika po nich.",
+                                                "Nigdy z apostrofem: **yours**, nie your's."
+                                        ],
+                                        "examples": [
+                                                "This shop is **mine**.",
+                                                "Is this bag **yours**?",
+                                                "I thought the car was **theirs**."
+                                        ]
+                                },
+                                {
+                                        "type": "table",
+                                        "tone": "blue",
+                                        "emoji": "📋",
+                                        "title": "Obok siebie",
+                                        "head": [
+                                                "Osoba",
+                                                "Przymiotnik + rzeczownik",
+                                                "Zaimek (sam)"
+                                        ],
+                                        "rows": [
+                                                [
+                                                        "I",
+                                                        "**my** car",
+                                                        "**mine**"
+                                                ],
+                                                [
+                                                        "you",
+                                                        "**your** car",
+                                                        "**yours**"
+                                                ],
+                                                [
+                                                        "he",
+                                                        "**his** car",
+                                                        "**his**"
+                                                ],
+                                                [
+                                                        "she",
+                                                        "**her** car",
+                                                        "**hers**"
+                                                ],
+                                                [
+                                                        "it",
+                                                        "**its** bowl",
+                                                        "(nie używa się samodzielnie)"
+                                                ],
+                                                [
+                                                        "we",
+                                                        "**our** car",
+                                                        "**ours**"
+                                                ],
+                                                [
+                                                        "they",
+                                                        "**their** car",
+                                                        "**theirs**"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "type": "card",
+                                        "tone": "red",
+                                        "emoji": "⚠️",
+                                        "title": "Pułapki",
+                                        "points": [
+                                                "**its** (jego/jej, o rzeczy lub zwierzęciu) to nie **it's** (= it is).",
+                                                "**his** wygląda tak samo w obu grupach: This is his car. / The car is his."
+                                        ],
+                                        "examples": [
+                                                "❌ I thought it was their.",
+                                                "✅ I thought it was **theirs**."
+                                        ]
+                                },
+                                {
+                                        "type": "tip",
+                                        "tone": "gold",
+                                        "emoji": "",
+                                        "title": "",
+                                        "text": "Szybki test: jeśli po słowie stoi rzeczownik, bierzesz my/your/their.\nJeśli zdanie się na nim kończy, bierzesz mine/yours/theirs."
+                                }
+                        ],
+                        "links": []
                 }
         ],
         "homework": [],
@@ -3293,7 +3647,112 @@ video {
                 }
         ],
         "writingSpeaking": [],
-        "exercises": [],
+        "exercises": [
+                {
+                        "lessonLabel": "Lekcja 3",
+                        "dateLabel": "26.09.2026",
+                        "title": "1. From the butcher's shop to the pilgrimage",
+                        "instructions": "Complete the text with the words and phrases from the box. Use each one once.",
+                        "layout": "text",
+                        "columns": [],
+                        "wordBox": [
+                                "sleeping bag",
+                                "compete",
+                                "advance",
+                                "you were busy",
+                                "founder",
+                                "hitchhike",
+                                "out of stock",
+                                "bait",
+                                "exclude",
+                                "ownership",
+                                "mechanic by trade",
+                                "serve",
+                                "scaffolding"
+                        ],
+                        "letters": false,
+                        "items": [
+                                {
+                                        "text": "My father was the [gap] of our butcher's shop. He started it with one small counter.",
+                                        "answers": [
+                                                "founder"
+                                        ]
+                                },
+                                {
+                                        "text": "Ten years ago, I took over [gap] of the business from him.",
+                                        "answers": [
+                                                "ownership"
+                                        ]
+                                },
+                                {
+                                        "text": "It isn't easy to [gap] with big supermarkets, because they can sell meat much cheaper.",
+                                        "answers": [
+                                                "compete"
+                                        ]
+                                },
+                                {
+                                        "text": "So every week we put cheap sausages in the window as [gap] to bring people into the shop.",
+                                        "answers": [
+                                                "bait"
+                                        ]
+                                },
+                                {
+                                        "text": "On Saturdays, I [gap] over a hundred customers.",
+                                        "answers": [
+                                                "serve"
+                                        ]
+                                },
+                                {
+                                        "text": "Last Saturday, our best ham was [gap] by ten o'clock, and some people were really angry.",
+                                        "answers": [
+                                                "out of stock"
+                                        ]
+                                },
+                                {
+                                        "text": "Dealing with people is the hardest part of the job. One of my workers, Tomek, is a [gap], but he prefers working with meat to fixing cars.",
+                                        "answers": [
+                                                "mechanic by trade"
+                                        ]
+                                },
+                                {
+                                        "text": "Last month, he asked me for an [gap] on his salary because he needed to buy a new fridge.",
+                                        "answers": [
+                                                "advance"
+                                        ]
+                                },
+                                {
+                                        "text": "I never [gap] anyone from team meetings. Even new workers can share their ideas.",
+                                        "answers": [
+                                                "exclude"
+                                        ]
+                                },
+                                {
+                                        "text": "Next week, I'm going on a pilgrimage to Santiago de Compostela in Spain. We're going to sleep in pilgrim hostels, so everyone has to carry a [gap].",
+                                        "answers": [
+                                                "sleeping bag"
+                                        ]
+                                },
+                                {
+                                        "text": "A friend walked the same route last year. He said some old churches on the way were covered in [gap] because builders were repairing them.",
+                                        "answers": [
+                                                "scaffolding"
+                                        ]
+                                },
+                                {
+                                        "text": "Even if my feet hurt, I won't [gap]. I want to walk the whole way.",
+                                        "answers": [
+                                                "hitchhike"
+                                        ]
+                                },
+                                {
+                                        "text": "Yesterday I rang an old friend to tell him about the trip. He said, \"Sorry I didn't call you last week. I thought [gap] with the shop.\"",
+                                        "answers": [
+                                                "you were busy"
+                                        ]
+                                }
+                        ]
+                }
+        ],
         "distractors": [
                 {
                         "word": "overdraft",
@@ -3389,9 +3848,42 @@ video {
                         "word": "hardly",
                         "translation": "ledwo",
                         "pos": "adv"
+                },
+                {
+                        "word": "receipt",
+                        "translation": "paragon",
+                        "pos": "n"
+                },
+                {
+                        "word": "blister",
+                        "translation": "pęcherz (na stopie)",
+                        "pos": "n"
+                },
+                {
+                        "word": "hire",
+                        "translation": "zatrudniać",
+                        "pos": "v"
+                },
+                {
+                        "word": "earn",
+                        "translation": "zarabiać",
+                        "pos": "v"
+                },
+                {
+                        "word": "go bankrupt",
+                        "translation": "zbankrutować",
+                        "pos": "phr"
+                },
+                {
+                        "word": "make a profit",
+                        "translation": "osiągać zysk",
+                        "pos": "phr"
                 }
         ],
-        "priorityVerbs": [],
+        "priorityVerbs": [
+                "go",
+                "sell"
+        ],
         "verbRoundSize": 6,
         "sentencePool": [
                 {
@@ -3640,6 +4132,84 @@ video {
                         "lessons": [
                                 "Lekcja 2"
                         ]
+                },
+                {
+                        "word": "compete",
+                        "lessons": [
+                                "Lekcja 3"
+                        ]
+                },
+                {
+                        "word": "you were busy",
+                        "lessons": [
+                                "Lekcja 3"
+                        ]
+                },
+                {
+                        "word": "out of stock",
+                        "lessons": [
+                                "Lekcja 3"
+                        ]
+                },
+                {
+                        "word": "founder",
+                        "lessons": [
+                                "Lekcja 3"
+                        ]
+                },
+                {
+                        "word": "bait",
+                        "lessons": [
+                                "Lekcja 3"
+                        ]
+                },
+                {
+                        "word": "ownership",
+                        "lessons": [
+                                "Lekcja 3"
+                        ]
+                },
+                {
+                        "word": "hitchhike",
+                        "lessons": [
+                                "Lekcja 3"
+                        ]
+                },
+                {
+                        "word": "mechanic by trade",
+                        "lessons": [
+                                "Lekcja 3"
+                        ]
+                },
+                {
+                        "word": "scaffolding",
+                        "lessons": [
+                                "Lekcja 3"
+                        ]
+                },
+                {
+                        "word": "advance",
+                        "lessons": [
+                                "Lekcja 3"
+                        ]
+                },
+                {
+                        "word": "serve",
+                        "lessons": [
+                                "Lekcja 3"
+                        ]
+                },
+                {
+                        "word": "sleeping bag",
+                        "lessons": [
+                                "Lekcja 3"
+                        ]
+                },
+                {
+                        "word": "exclude",
+                        "lessons": [
+                                "Lekcja 3"
+                        ]
                 }
         ],
         "sentenceCount": 5,
@@ -3653,6 +4223,11 @@ video {
                         "lessonLabel": "Lekcja 2",
                         "dateLabel": "12.09.2026",
                         "text": "Warto powtórzyć słownictwo na fiszkach i w teście - dobrze rozejrzeć się po całym Hubie i włączyć naukę angielskiego jako codzienny nawyk (microlearning). Warto też obejrzeć filmik i zrobić test z linków w sekcji gramatyki."
+                },
+                {
+                        "lessonLabel": "Lekcja 3",
+                        "dateLabel": "26.09.2026",
+                        "text": "Pamiętaj o dodawaniu „s” i „es” do czasowników w 3. osobie l. poj. w czasie Present Simple, a mówiąc o przeszłości, zmieniaj czasownik na czas przeszły. Przed rzeczownikami niepoliczalnymi nie stawiamy „a/an”. Ćwicz słownictwo na Fiszkach i Testach. Napisz zdania ze słówkami i wyślij mi na WhatsAppie do sprawdzenia."
                 }
         ]
 };
@@ -5443,6 +6018,42 @@ video {
                 .map(function (l) { return { label: l.label, dateLabel: l.dateLabel, items: map[l.label] }; });
         }
 
+        // Notatka graficzna do zagadnienia (opcjonalne g.sections, od 2026-09-25):
+        // kolorowe karty z punktami i przykladami, tabela porownawcza, ramka-wskazowka.
+        // **tekst** w srodku = wyroznienie. Wpisy bez sections renderuja sie jak dotad.
+        function gramInline(s) {
+            return escapeHtml(s).replace(/\*\*(.+?)\*\*/g, '<strong class="hub-hl">$1</strong>');
+        }
+        function renderSections(list) {
+            if (!list || !list.length) return '';
+            return '<div class="hub-gsections">' + list.map(function (s) {
+                var tone = ' tone-' + (s.tone || 'blue');
+                var title = s.title ? '<p class="hub-gcard-title">' +
+                    (s.emoji ? '<span class="hub-gcard-emoji">' + escapeHtml(s.emoji) + '</span>' : '') +
+                    gramInline(s.title) + '</p>' : '';
+                if (s.type === 'tip') {
+                    return '<div class="hub-gtip' + tone + '">' +
+                        (s.emoji ? '<span class="hub-gtip-emoji">' + escapeHtml(s.emoji) + '</span>' : '') +
+                        '<div class="hub-gtip-body">' + (s.title ? '<p class="hub-gtip-title">' + gramInline(s.title) + '</p>' : '') +
+                        '<p class="hub-gtip-text">' + gramInline(s.text || '') + '</p></div></div>';
+                }
+                if (s.type === 'table') {
+                    return '<div class="hub-gcard' + tone + '">' + title +
+                        '<div class="hub-gtable-wrap"><table class="hub-gtable"><thead><tr>' +
+                        (s.head || []).map(function (h) { return '<th>' + gramInline(h) + '</th>'; }).join('') +
+                        '</tr></thead><tbody>' +
+                        (s.rows || []).map(function (r) {
+                            return '<tr>' + r.map(function (c) { return '<td>' + gramInline(c) + '</td>'; }).join('') + '</tr>';
+                        }).join('') + '</tbody></table></div></div>';
+                }
+                var points = (s.points && s.points.length) ? '<ul class="hub-gcard-points">' +
+                    s.points.map(function (p) { return '<li>' + gramInline(p) + '</li>'; }).join('') + '</ul>' : '';
+                var ex = (s.examples && s.examples.length) ? '<div class="hub-gcard-ex"><p class="hub-gcard-ex-label">Przykłady</p>' +
+                    s.examples.map(function (e) { return '<p class="hub-gcard-ex-line">' + gramInline(e) + '</p>'; }).join('') + '</div>' : '';
+                return '<div class="hub-gcard' + tone + '">' + title + points + ex + '</div>';
+            }).join('') + '</div>';
+        }
+
         function renderGrammar() {
             var box = el('hub-grammar-list');
             if (box) {
@@ -5481,6 +6092,7 @@ video {
                             return '<div class="hub-gram">' +
                                 topic + pair + items +
                                 (g.explanation ? '<p class="hub-gram-expl">' + escapeAndLinkify(g.explanation) + '</p>' : '') +
+                                renderSections(g.sections) +
                                 renderLinks(g.links) +
                                 '</div>';
                         }).join('');
@@ -5812,6 +6424,17 @@ video {
             return !!(ch && ch[gap] && ch[gap].length);
         }
         function exLetter(ex, i) { return ex.letters ? String.fromCharCode(65 + i) + ' ' : ''; }
+        // layout "table": text pozycji to komorki rozdzielone "|"; przy svg
+        // pierwsza kolumna jest obrazkiem, wiec komorki z lukami zaczynaja sie od 1.
+        function exCellOffset(ex) { return ex.items.some(function (it) { return it.svg; }) ? 1 : 0; }
+        function exGapColumn(ex, itIdx, gap) {
+            var cells = ex.items[itIdx].text.split('|'), seen = 0;
+            for (var c = 0; c < cells.length; c++) {
+                seen += cells[c].split('[gap]').length - 1;
+                if (gap < seen) return ex.columns[c + exCellOffset(ex)] || '';
+            }
+            return '';
+        }
         // Wynik jednego cwiczenia liczony z zapisanego stanu, nie z DOM - ten sam
         // rachunek dla ekranu i dla wiadomosci na WhatsApp.
         function exResult(exIdx) {
@@ -5825,7 +6448,12 @@ video {
                     if (String(val).trim()) filled++;
                     var good = String(val).trim() && exAccepted(a).some(function (x) { return exNorm(x) === exNorm(val); });
                     if (good) ok++;
-                    else wrong.push({ num: ex.layout === 'text' ? n : (itIdx + 1), val: String(val).trim() });
+                    else wrong.push({
+                        num: ex.layout === 'text' ? n
+                            : ex.layout === 'table' ? (itIdx + 1) + ', ' + exGapColumn(ex, itIdx, gap)
+                            : (itIdx + 1),
+                        val: String(val).trim()
+                    });
                 });
             });
             return { total: total, ok: ok, filled: filled, wrong: wrong };
@@ -5860,6 +6488,25 @@ video {
                 var body;
                 if (ex.layout === 'text') {
                     body = '<p class="hub-ex-text">' + ex.items.map(itemHtml).join(' ') + '</p>';
+                } else if (ex.layout === 'table') {
+                    var withSvg = exCellOffset(ex) === 1;
+                    body = '<div class="hub-ex-table-wrap"><table class="hub-ex-table"><thead><tr><th></th>' +
+                        ex.columns.map(function (c) { return '<th>' + escapeHtml(c) + '</th>'; }).join('') +
+                        '</tr></thead><tbody>' +
+                        ex.items.map(function (it, itIdx) {
+                            var gi = 0;
+                            var cells = it.text.split('|').map(function (cell) {
+                                var parts = cell.split('[gap]');
+                                return '<td>' + parts.map(function (p, i) {
+                                    return escapeHtml(p.trim()) + (i < parts.length - 1 ? gapHtml(it, itIdx, gi++) : '');
+                                }).join('') + '</td>';
+                            }).join('');
+                            // svg pochodzi z hub_input.json i przeszedl walidacje buildera.
+                            return '<tr><td class="hub-ex-num">' + (itIdx + 1) + '.</td>' +
+                                (withSvg ? '<td class="hub-ex-img" aria-hidden="true">' + it.svg + '</td>' : '') +
+                                cells + '</tr>';
+                        }).join('') +
+                        '</tbody></table></div>';
                 } else {
                     body = ex.items.map(function (it, itIdx) {
                         return '<div class="hub-ex-item"><span class="hub-ex-num">' + (itIdx + 1) + '.</span>' + itemHtml(it, itIdx) + '</div>';
